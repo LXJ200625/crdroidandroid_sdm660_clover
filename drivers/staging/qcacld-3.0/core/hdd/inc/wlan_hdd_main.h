@@ -171,6 +171,7 @@ struct hdd_apf_context {
 		} \
 	} while (0)
 
+#if 0
 /*
  * API in_compat_syscall() is introduced in 4.6 kernel to check whether we're
  * in a compat syscall or not. It is a new way to query the syscall type, which
@@ -179,6 +180,7 @@ struct hdd_apf_context {
  */
 #if (LINUX_VERSION_CODE < KERNEL_VERSION(4, 6, 0))
 static inline bool in_compat_syscall(void) { return is_compat_task(); }
+#endif
 #endif
 
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 7, 0)) || \
